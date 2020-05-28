@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@keyframes heartbeat {
+  0% {
+    width: 50px;
+    margin-top: 0;
+  }
+
+  50% {
+    width: 60px;
+    margin-top: -5px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+@keyframes rounded {
+  
+}
+body {
+  position: relative;
+  background-image: linear-gradient(to right, #ec6f66, #f3a183);
+  
+}
+
+.container {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 90px auto;
+  background-color: cornsilk;
+  padding: 5px 20px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.container::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("gg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  z-index:-1;
+}
+.container h2 {
+  position: relative;
+  font-family: "Niconne", cursive;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px;
+  color: crimson;
+  letter-spacing: 3px;
+}
+.container p {
+  text-align: center;
+  color: crimson;
+  font-size: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container p img{
+  width: 50px;
+  animation: heartbeat 1s infinite;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+.controls input {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 2px solid rgb(255, 181, 181);
+  border-radius: 5px;
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  font-family: "Balsamiq Sans", cursive;
+  background-color: white;
+  background-image: unset;
+  color: rgb(22, 133, 109);
+}
+.controls input::placeholder {
+  font-size: 0.8em;
+}
+.controls input:focus , button:focus{
+  outline: none;
+}
+#calculate-button {
+  margin: 40px;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  background: #f857a6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff5858,
+    #f857a6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff5858,
+    #f857a6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 50%;
+  align-self: center;
+}
+
+.ad {
+  font-size: larger;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
